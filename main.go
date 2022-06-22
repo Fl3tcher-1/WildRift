@@ -11,8 +11,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-
-
 // func topLane(input string) {
 
 // 	akali := Champion{s
@@ -214,91 +212,7 @@ import (
 // 		//  "Roaming & executing enemies",
 // 		//  "Mid Game",
 // 	}
-// 	if input == "akali" {
-// 		fmt.Println(akali)
-// 	}
-// 	if input == "camille" {
-// 		fmt.Println(camille)
-// 	}
-// 	if input == "darius" {
-// 		fmt.Println(darius)
-// 	}
-// 	if input == "diana" {
-// 		fmt.Println(diana)
-// 	}
-// 	if input == "mundo" {
-// 		fmt.Println(mundo)
-// 	}
-// 	if input == "fiora" {
-// 		fmt.Println(fiora)
-// 	}
-// 	if input == "garen" {
-// 		fmt.Println(garen)
-// 	}
-// 	if input == "gragas" {
-// 		fmt.Println(gragas)
-// 	}
-// 	if input == "graves" {
-// 		fmt.Println(graves)
-// 	}
-// 	if input == "irelia" {
-// 		fmt.Println(irelia)
-// 	}
-// 	if input == "jarvan" {
-// 		fmt.Println(jarvan)
-// 	}
-// 	if input == "jax" {
-// 		fmt.Println(jax)
-// 	}
-// 	if input == "jayce" {
-// 		fmt.Println(jayce)
-// 	}
-// 	if input == "kayle" {
-// 		fmt.Println(kayle)
-// 	}
-// 	if input == "kennen" {
-// 		fmt.Println(kennen)
-// 	}
-// 	if input == "malphite" {
-// 		fmt.Println(malphite)
-// 	}
-// 	if input == "nasus" {
-// 		fmt.Println(nasus)
-// 	}
-// 	if input == "olaf" {
-// 		fmt.Println(olaf)
-// 	}
-// 	if input == "pantheon" {
-// 		fmt.Println(pantheon)
-// 	}
-// 	if input == "renekton" {
-// 		fmt.Println(renekton)
-// 	}
-// 	if input == "riven" {
-// 		fmt.Println(riven)
-// 	}
-// 	if input == "sett" {
-// 		fmt.Println(sett)
-// 	}
-// 	if input == "singed" {
-// 		fmt.Println(singed)
-// 	}
-// 	if input == "teemo" {
-// 		fmt.Println(teemo)
-// 	}
-// 	if input == "tryndamere" {
-// 		fmt.Println(tryndamere)
-// 	}
-// 	if input == "vayne" {
-// 		fmt.Println(vayne)
-// 	}
-// 	if input == "wukong" {
-// 		fmt.Println(wukong)
-// 	}
-// 	if input == "yasuo" {
-// 		fmt.Println(yasuo)
-// 	}
-// }
+
 func CheckErr(e error) {
 	fmt.Println(e)
 }
@@ -355,9 +269,6 @@ func main() {
 		}
 
 	}
-	// var role = "feed"
-	// var strong = "noone you me"
-	// var weak = "himself"
 
 	fmt.Println(data.GetChamp())
 }

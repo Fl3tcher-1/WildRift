@@ -1,2 +1,84 @@
-nasus,solo lane,wukong vayne pantheon teemo,akali kennen mundo singed
+nasus,solo lane,wukong vayne pantheon teemo,akali kennen dr mundo singed
 garen,solo lane,vayne pantheon kayle teemo,akali jax riven singed
+darius,solo lane, ekko kayle teemo olaf, garen akali yasuo jax
+sett, solo lane, wukong vayne kayle teemo, akali dr mundo riven irelia
+maplhite, solo lane, karma braum pantheon nasus, yuumi blitzcrank darius riven
+teemo, solo lane, diana kayle maplhite brand, fiora sett darius katarina
+irelia, solo lane mid lane, sett shen brand renekton, akali fiora lucian fizz
+fiora, solo lane, yasuo teemo nasus olaf, jax dr mundo darius singed
+renekton, solo lane, tryndamere kayle teemo malphite, akali fiora riven irelia
+pantheon, solo lane jungle, lux ekko morgana kayle, garen rengar evelynn yasuo
+kennen, solo lane mid lane,diana kayle nasus brand, akali fizz katarina jayce
+riven, solo lane, ekko pantheon kennen malphite wukong, akali fiora lee sin darius
+kayle, solo lane mid lane, ekko twisted fate lucian brand, garen yasuo darius fizz
+yasuo, solo lane mid lane, morgana pantheon kayle teemo, orianna akali annie ziggs
+shen, solo lane river, lux morgana kennen dr mundo, tryndamere fiora lee sin darius
+tryndamere, solo lane jungle, wukong teemo kennen rammus, rengar evelynn shyvana vi
+dr mundo, solo lane jungle, lux ekko xin zhao kayle, garen akali darius olaf
+jax, solo lane jungle, amumu nunu & willump fiora teemo, rengar kha'zix evelynn master yi
+akali, solo lane mid lane, morgana pantheon akshan brand, orianna annie ziggs
+jayce, solo lane, tryndamere pantheon teemo brand, akali dr mundo
+olaf, jungle solo lane, nunu & willump tryndamere morgana rammus, rengar evelynn vi sett
+wukong, jungle solo lane, amumu teemo rammus malphite, rengar evelynn vi jarvan IV
+singed, solo lane, kayle teemo kennen irelia, ekko akali yasuo jayce
+vayne, dragon lane solo lane, jinx tristana draven ashe, garen kai`sa varus
+lucian, dragon lane, ahri tristana nasus irelia, kai`sa
+ekko, mid lane, twisted fate morgana rammus nasus, evelynn pantheon akali zed
+camille, solo lane, yasuo kayle teemo shen, info missing
+diana, mid lane, lux kayle master yi brand, akali annie fizz ziggs
+zed, mid lane, ekko diana morgana kayle, akali annie ziggs katarina
+graves, jungle solo lane, nunu & willump morgana pantheon rammus, garen ekko dr mundo darius
+fizz, mid lane, diana kayle kennen master yi, orianna akali annie ziggs
+gragas, solo lane, diana xin zhao kha`zix jax, no info
+jarvan IV, jungle, morgana rammus nasus master yi, rengar evelynn vi lee sin
+ahri, mid lane, seraphine kayle kennen brand, orianna aurelion sol annie lucian
+veigar, mid lane, seraphine, akali katarina annie yasuo lucian
+katarina, mid lane, diana kayle kennen brand, orianna akali annie ziggs
+ekko, mid lane, twisted fate morgana rammus nasus, evelynn pantheon akali zed
+brand, mid lane support, karma braum malphite veigar, akali annie nami katarina
+twisted fate, mid lane, diana jinx morgana galio, ekko akali annie lucian
+lux, support mid lane, karma yasuo zed brand, morgana annie janna alistair
+annie, mid lane, zed fizz irelia akshan, yuumi blitzcrank
+ziggs, mid lane, morgana seraphine yasuo galio, annie akshan
+orianna, mid lane, morgana ahri kennen fizz, ekko twisted fate lucian ziggs
+morgana, support mid lane jungle, karma malphite nami brand, ekko evelynn akali yasuo
+akshan, mid lane, morgana ziggs caitlyn brand, akali annie xayah katarina
+galio, mid lane support, karma nami akshan veigar, akali annie kennen fizz
+aurelion sol, mid lane, lux ekko irelia brand, orianna akali annie kennen
+seraphine, support mid lane, karma leona alistair malphite, morgana blitzcrank annie sona
+corki, mid lane, lux tristana irelia brand, twisted fate morgana akali lucian
+ezreal, mid lane dragon lane, jinx tristana draven ashe, kai`sa lucian xayah varus
+karma, support mid lane, nami soraka, braum morgana rakan janna
+jinx, dragon lane, jhin tristana miss fortune draven, vayne kai`sa xayah varus
+caitlyn, dragon lane, tristana, vayne kai`sa lucian xayah
+ashe, dragon lane support, jhin tristana miss fortune draven, vayne kai`sa lucian xayah
+miss fortune, dragon lane, jhin tristana draven ezreal, kai`sa lucian xayah ashe
+tristana, dragon lane, jhin draven caitlyn, vayne kai`sa lucian xayah
+jhin, dragon lane, tristana draven ezreal caitlyn, kai`sa lucian xayah miss fortune
+kai`sa, dragon lane, jinx tristana draven ashe, no info
+xayah, dragon lane, jhin tristana miss fortune draven, vayne kai`sa lucian varus
+draven, dragon lane, jhin tristana caitlyn, vayne kai`sa lucian xayah
+varus, dragon lane, tristana miss fortune draven ashe, kai`sa lucian
+senna, support dragon lane, karma braum tristana soraka, kinx yuumi morgana rakan
+rengar, jungle, amumu nunu & willump jax rammus, graves
+amumu, jungle, tryndamere morgana rammus master yi, rengar evelynn vi jarvan IV
+master yi, jungle, nunu & willump tryndamere jax rammus, rengar, vi, jarvan IV, dr mundo
+nunu & willump, jungle, amumu xin zhao morgana rammus, evelynn pantheon shyvana jarvan iv
+kha`zix, jungle, nunu & willump morgana rammus riven, rengar ekko jarvan IV graves
+lee sin, jungle, amumu nunu & willump morgana rammus, shyvana
+vi, jungle, amumu wukong rammus master yi, rengar ekko evelynn lee sin
+evelynn, jungle, amumu nunu & willump morgana rammus, dr mundo
+shyvana, jungle, nunu & willump tryndamere rammus master yi, rengar ekko evelynn vi
+rammus, jungle, morgana, rengar kha`zix evelynn master yi
+thresh, support, karma braum leona alistair, yuumi morgana blitzcrank seraphine
+blitzcrank, support, braum pantheon malphite soraka, yuumi sona lulu rakan
+yuumi, support, braum leona alistair soraka, janna
+lulu, support, karma sona malphite soraka, morgana leona rakan
+nami, support, seraphine malphite soraka brand, yuumi morgana rakan janna
+leona, support, karma sona lulu soraka, yuumi blitzcrank seraphine janna
+soraka, support, seraphine brand, yuumi braum lulu rakan
+braum, support, lux karma malphite nami, yuumi rakan janna alistair
+rakan, support, karma sona alistair nami, yuumi morgana janna thresh
+sona, support, lux braum blitzcrank seraphine, yuumi lulu rakan janna
+alistair, support, lux braum sona janna, yuumi seraphine lulu rakan
+janna, support, lux pantheon seraphine annie, lulu alistair
