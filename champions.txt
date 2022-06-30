@@ -2,7 +2,7 @@ nasus,solo lane,wukong vayne pantheon teemo,akali kennen dr mundo singed
 garen,solo lane,vayne pantheon kayle teemo,akali jax riven singed
 darius,solo lane, ekko kayle teemo olaf, garen akali yasuo jax
 sett, solo lane, wukong vayne kayle teemo, akali dr mundo riven irelia
-maplhite, solo lane, karma braum pantheon nasus, yuumi blitzcrank darius riven
+malphite, solo lane, karma braum pantheon nasus, yuumi blitzcrank darius riven
 teemo, solo lane, diana kayle maplhite brand, fiora sett darius katarina
 irelia, solo lane mid lane, sett shen brand renekton, akali fiora lucian fizz
 fiora, solo lane, yasuo teemo nasus olaf, jax dr mundo darius singed

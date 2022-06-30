@@ -260,7 +260,6 @@ func main() {
 
 	for champNumber, _ := range Data {
 		for i, v := range strings.Split(Data[champNumber], "\n") {
-			// fmt.Println(i, v)
 			switch i {
 			case 0:
 				name = v
@@ -270,8 +269,7 @@ func main() {
 				strong = v
 			case 3:
 				weak = v
-				// fmt.Println(data.GetChamp())
-				// allChamps(data.GetChamp())
+
 			}
 		}
 		data.CreateChampion(database.Champion{
@@ -282,7 +280,6 @@ func main() {
 		})
 		
 	}
-	// fmt.Println(data.GetChamp())
 	fmt.Println("Starting server at port 8080:\n http://localhost:8080/home")
 
 	if err := http.ListenAndServe(":8080", mux); err != nil {
@@ -290,27 +287,9 @@ func main() {
 		fmt.Printf("main ListenAndServe error: %+v\n", err)
 	}
 }
-// func css(w http.ResponseWriter, r *http.Request){
-// 	http.ServeFile(w,r, "./templates/style.css")
-// }
 
 func champ(s []string) string {
-	// fmt.Println(s)
 	return strings.Join(s, "\n")
-}
-
-func allChamps(s []database.Champion) {
-
-	type championStruct struct {
-		Champ []database.Champion
-	}
-
-	var ChampionRef championStruct
-
-	ChampionRef.Champ = append(ChampionRef.Champ, s...)
-	// fmt.Println(ChampionRef)
-	
-
 }
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
@@ -322,16 +301,24 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	data := database.Connect(db)
 	database.Connect(db)
 
-	// fmt.Println(data.GetChamp())
 	tpl := template.Must(template.ParseGlob("templates/*"))
 	tpl.ExecuteTemplate(w, "home.html", data.GetChamp())
 }
 
 func Handler(w http.ResponseWriter, r *http.Request) {
+	//pathLink refers to the location where a file is stored e.g. "./images/ahri.jpg"
+	pathLink := "./images"
+	pathLink += r.URL.Path
+	//name is used in order not to manually have to write the endpoint--- instead parsing it directly from url path as it will refer to an image to be served
+	name:= r.URL.Path
+	pathLink += ".jpg"
+
 	switch r.URL.Path {
 	case "/style":
 		http.ServeFile(w, r, "./templates/style.css")
 	case "/home":
 		homeHandler(w, r)
+	case name:
+		http.ServeFile(w,r, pathLink)
 	}
 }

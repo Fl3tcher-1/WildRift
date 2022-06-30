@@ -13,16 +13,14 @@
     <div class="grid">
         {{range .}}
         <div class="cell">
-            <h2>
-                champion name: 
-            </h2>
-            <h3>
+            <h1>
                 {{.Name}}
             </h3>
-            <h2>
+            <img src={{.Name}}>
+            <!-- <h2>
                 champion role: 
-            </h2>
-            <h3>
+            </h2> -->
+            <!-- <h3>
                 {{.Role}}
             </h3>
             <h2>
@@ -36,7 +34,7 @@
             </h2>
             <h3>
                 {{.WeakVS}}
-            </h3>
+            </h3> -->
         </div> 
         {{end}}
     </div>
