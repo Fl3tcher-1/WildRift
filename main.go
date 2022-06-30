@@ -233,33 +233,35 @@ func main() {
 	mux.HandleFunc("/", Handler)
 	// mux.HandleFunc("/style", css)
 
-	file, err := os.OpenFile("champions.txt", os.O_RDWR, 0644)
+	file, err := os.OpenFile("champions.txt", os.O_RDWR, 0644) //open text file
 	if err != nil {
 		CheckErr(err)
 	}
 	defer file.Close()
 
-	scanner := bufio.NewScanner(file)
-	type finalChamps struct {
+	scanner := bufio.NewScanner(file) //scan file
+
+	type finalChamps struct { //create a struct referencing another struct that we will use as the layout
 		champ database.Champion
 	}
-
 	var Data []string
-	counter := 0
-	for scanner.Scan() {
+	// counter := 0
+
+	for scanner.Scan() { // scans text and splits on "," as it indicates a different column of databse to b populated
 		line := scanner.Text()
-		items := strings.Split(line, ",")
-		Data = append(Data, champ(items))
-		counter++
+		items := strings.Split(line, ",") // creates []string with newlines instead of ","
+		Data = append(Data, champ(items)) //joins each entry on newline
+		// counter++
 	}
+	//initialise variables to store date
 
 	var name = ""
 	var role = ""
 	var strong = ""
 	var weak = ""
 
-	for champNumber, _ := range Data {
-		for i, v := range strings.Split(Data[champNumber], "\n") {
+	for champNumber, _ := range Data { //range over data and create a new variable in databse based on index [0]=name [1]= role [2]= strong [3]=weak, champ number refers to which champion
+		for i, v := range strings.Split(Data[champNumber], "\n") { // i, v refers to the index and values inside each []champion
 			switch i {
 			case 0:
 				name = v
@@ -269,7 +271,6 @@ func main() {
 				strong = v
 			case 3:
 				weak = v
-
 			}
 		}
 		data.CreateChampion(database.Champion{
@@ -287,11 +288,12 @@ func main() {
 		fmt.Printf("main ListenAndServe error: %+v\n", err)
 	}
 }
-
+//joins string
 func champ(s []string) string {
 	return strings.Join(s, "\n")
 }
 
+//handles home page
 func homeHandler(w http.ResponseWriter, r *http.Request) {
 		db, err := sql.Open("sqlite3", "./database/champion.db")
 	if err != nil {
@@ -305,6 +307,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	tpl.ExecuteTemplate(w, "home.html", data.GetChamp())
 }
 
+//handlers handles all the website endpoints
 func Handler(w http.ResponseWriter, r *http.Request) {
 	//pathLink refers to the location where a file is stored e.g. "./images/ahri.jpg"
 	pathLink := "./images"
