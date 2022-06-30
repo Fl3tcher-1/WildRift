@@ -5,9 +5,9 @@ import (
 	"fmt"
 )
 
-type Website struct {
-	*sql.DB
-}
+// type Website struct {
+// 	*sql.DB
+// }
 
 var DB *sql.DB
 
@@ -21,7 +21,7 @@ func Hi() {
 
 func championData(db *sql.DB) {
 	stmt, err := db.Prepare(`CREATE TABLE IF NOT EXISTS champion (
-		name TEXT,
+		name TEXT UNIQUE,
 		role TEXT,
 		strong TEXT,
 		weak TEXT);
@@ -51,23 +51,34 @@ func (website *Website) CreateChampion(champion Champion) {
 }
 
 func (data *Website) GetChamp() []Champion {
-	champions := []Champion{}
+	// champions := []Champion{}
 
-	rows, _ := data.DB.Query(`SELECT * FROM champion`)
+	rows, err := data.DB.Query(`SELECT * FROM champion`)
+	if err !=nil{
+		fmt.Println(err)
+	}
+	defer rows.Close()
 
-	var name string
-	var role string
-	var strong string
-	var weak string
+	champData := []Champion{}
+
+	// var name string
+	// var role string
+	// var strong string
+	// var weak string
 
 	for rows.Next() {
-		rows.Scan(&name, &role, &strong, &weak)
+		i:= Champion{}
+		err = rows.Scan(&i.Name, &i.Role, &i.StrongVS, &i.WeakVS)
+		if err !=nil{
+			fmt.Println(err)
+		}
+		champData =append(champData, i)
 	}
-	champions = append(champions, Champion{
-		Name:     name,
-		Role:     role,
-		StrongVS: strong,
-		WeakVS:   weak,
-	})
-	return champions
+	// champions = append(champions, Champion{
+	// 	Name:     name,
+	// 	Role:     role,
+	// 	StrongVS: strong,
+	// 	WeakVS:   weak,
+	// })
+	return champData
 }

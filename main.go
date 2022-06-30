@@ -4,6 +4,9 @@ import (
 	"bufio"
 	"database/sql"
 	"fmt"
+	"html/template"
+	"log"
+	"net/http"
 	"os"
 	"strings"
 	"wildrift/database"
@@ -217,14 +220,18 @@ func CheckErr(e error) {
 	fmt.Println(e)
 }
 func main() {
-
+	
 	db, err := sql.Open("sqlite3", "./database/champion.db")
 	if err != nil {
 		CheckErr(err)
 	}
-
+	
 	data := database.Connect(db)
 	database.Connect(db)
+	
+	mux := http.NewServeMux()
+	mux.HandleFunc("/", Handler)
+	// mux.HandleFunc("/style", css)
 
 	file, err := os.OpenFile("champions.txt", os.O_RDWR, 0644)
 	if err != nil {
@@ -233,6 +240,9 @@ func main() {
 	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
+	type finalChamps struct {
+		champ database.Champion
+	}
 
 	var Data []string
 	counter := 0
@@ -242,13 +252,15 @@ func main() {
 		Data = append(Data, champ(items))
 		counter++
 	}
+
 	var name = ""
 	var role = ""
 	var strong = ""
 	var weak = ""
+
 	for champNumber, _ := range Data {
 		for i, v := range strings.Split(Data[champNumber], "\n") {
-			fmt.Println(i, v)
+			// fmt.Println(i, v)
 			switch i {
 			case 0:
 				name = v
@@ -258,22 +270,68 @@ func main() {
 				strong = v
 			case 3:
 				weak = v
-				data.CreateChampion(database.Champion{
-					Name:     name,
-					Role:     role,
-					StrongVS: strong,
-					WeakVS:   weak,
-				})
+				// fmt.Println(data.GetChamp())
+				// allChamps(data.GetChamp())
 			}
-
 		}
-
+		data.CreateChampion(database.Champion{
+			Name:     name,
+			Role:     role,
+			StrongVS: strong,
+			WeakVS:   weak,
+		})
+		
 	}
+	// fmt.Println(data.GetChamp())
+	fmt.Println("Starting server at port 8080:\n http://localhost:8080/home")
 
-	fmt.Println(data.GetChamp())
+	if err := http.ListenAndServe(":8080", mux); err != nil {
+		log.Fatal(500, "500 Internal server error:", err)
+		fmt.Printf("main ListenAndServe error: %+v\n", err)
+	}
 }
+// func css(w http.ResponseWriter, r *http.Request){
+// 	http.ServeFile(w,r, "./templates/style.css")
+// }
 
 func champ(s []string) string {
 	// fmt.Println(s)
 	return strings.Join(s, "\n")
+}
+
+func allChamps(s []database.Champion) {
+
+	type championStruct struct {
+		Champ []database.Champion
+	}
+
+	var ChampionRef championStruct
+
+	ChampionRef.Champ = append(ChampionRef.Champ, s...)
+	// fmt.Println(ChampionRef)
+	
+
+}
+
+func homeHandler(w http.ResponseWriter, r *http.Request) {
+		db, err := sql.Open("sqlite3", "./database/champion.db")
+	if err != nil {
+		CheckErr(err)
+	}
+
+	data := database.Connect(db)
+	database.Connect(db)
+
+	// fmt.Println(data.GetChamp())
+	tpl := template.Must(template.ParseGlob("templates/*"))
+	tpl.ExecuteTemplate(w, "home.html", data.GetChamp())
+}
+
+func Handler(w http.ResponseWriter, r *http.Request) {
+	switch r.URL.Path {
+	case "/style":
+		http.ServeFile(w, r, "./templates/style.css")
+	case "/home":
+		homeHandler(w, r)
+	}
 }
