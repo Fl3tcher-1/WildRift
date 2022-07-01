@@ -12,11 +12,15 @@
     <div class="hello"><h1>HELLO</h1></div>
     <div class="grid">
         {{range .}}
-        <div class="cell">
+        <div class="cell" title="{{.Name}}">
             <h1>
                 {{.Name}}
             </h3>
-            <img src={{.Name}}>
+            <div class="img">
+                <a href="/home/{{.Name}}">
+                    <img src={{.Name}}>
+                </a>
+            </div>
             <!-- <h2>
                 champion role: 
             </h2> -->

@@ -11,6 +11,16 @@ body{
     /* grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); */
 }
 
+.gridSingle{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3px;
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+}
+
 .cell{
     display: flex;
     flex-direction: column;
@@ -19,9 +29,10 @@ body{
     opacity: 80%;
     border:  3px solid aliceblue;
     transition: all .15s ease-in-out;
+    overflow: hidden;
 }
 .cell:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
     font-size: 120%;
 }
 .cell >h1{
@@ -35,6 +46,14 @@ body{
 .cell >h3{
     color: rgb(0, 175, 175);
     text-transform: uppercase;
+}
+.grid > .cell > .img{
+    transition: all .15s ease-in-out;
+}
+
+.grid > .cell > .img:hover{
+    transform: scale(1.1);
+    overflow: hidden;
 }
 .hello{
     display: flex;

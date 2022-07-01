@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style" type="text/css">
+
     <title>Document</title>
 </head>
 <body>
+    <div class="gridSingle">
+        <div class="cell">
+           <h1>
+            {{.Name}}
+           </h1> 
+           <div class="img">
+            <img src="/{{.Name}}" alt="" srcset="">
+           </div>
+           <h2>
+               {{.Role}}
+           </h2>
+           <h2>
+               {{.StrongVS}}
+           </h2>
+           <h2>
+               {{.WeakVS}}
+           </h2>
+        </div>
+    </div>
     
 </body>
 </html>
