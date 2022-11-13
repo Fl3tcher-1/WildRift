@@ -2,12 +2,17 @@ body{
     background-color: black;
 }
 
+title{
+    /* text-transform: capitalize; */
+}
+
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding: 3px;
     margin: 0;
     gap: 30px;
+    justify-content: center;
     /* grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); */
 }
 
@@ -19,6 +24,10 @@ body{
     justify-content: center;
     text-align: center;
     gap: 10px;
+}
+
+.info{
+    color: aliceblue;
 }
 
 .cell{
@@ -61,6 +70,33 @@ body{
 }
 h1{
     color: aqua;
+    text-transform: capitalize;
+}
+
+.strong >h2, .role >h2, .weak >h2{
+    color: aqua;
+    margin: 10px;
+    font-size: 26px;
+    text-transform: capitalize;
+    /* border-bottom: 3px solid white; */
+    
+}
+h3{
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
+}
+hr{
+    padding: 0%;
+    width: 75px;
+    margin-top: 5px;
+}
+
+a{
+    display: flex;
+    margin: 25px;
+    justify-content: center;
+    text-decoration: none;
 }
 
 @media (min-width: 400px){

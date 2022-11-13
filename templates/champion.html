@@ -2,32 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/images/favicon-32x32.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style" type="text/css">
 
-    <title>Document</title>
+
+    <title>{{.Name}}</title>
 </head>
 <body>
     <div class="gridSingle">
-        <div class="cell">
+        <div class="info">
            <h1>
             {{.Name}}
            </h1> 
            <div class="img">
             <img src="/{{.Name}}" alt="" srcset="">
            </div>
-           <h2>
-               {{.Role}}
-           </h2>
-           <h2>
-               {{.StrongVS}}
-           </h2>
-           <h2>
-               {{.WeakVS}}
-           </h2>
+            <div class="role">
+                <h2>
+                    character role: 
+                </h2>
+                <!-- <hr> -->
+                <h3>
+                    {{.Role}}
+                </h3>
+                <hr>
+            </div>
+
+            <div class="strong">
+                <h2>
+                    {{.Name}} is strong vs: 
+                </h2>
+                <!-- <hr> -->
+                <h3>
+                    {{.StrongVS}}
+                </h3>
+                <hr>
+            </div>
+
+            <div class="weak">
+                <h2>
+                 {{.Name}} is weak vs: 
+                 <!-- <hr> -->
+                </h2>
+                <h3> {{.WeakVS}}</h3>
+                <hr>
+            </div>
         </div>
     </div>
+    <a href="/home">
+    <button>
+        Go Back
+    </button>
+</a>
     
 </body>
 </html>

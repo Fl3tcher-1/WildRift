@@ -37,7 +37,7 @@ katarina, mid lane, diana kayle kennen brand, orianna akali annie ziggs
 ekko, mid lane, twisted fate morgana rammus nasus, evelynn pantheon akali zed
 brand, mid lane support, karma braum malphite veigar, akali annie nami katarina
 twisted fate, mid lane, diana jinx morgana galio, ekko akali annie lucian
-lux, support mid lane, karma yasuo zed brand, morgana annie janna alistair
+lux, support mid lane, karma yasuo zed brand, morgana annie janna alistar
 annie, mid lane, zed fizz irelia akshan, yuumi blitzcrank
 ziggs, mid lane, morgana seraphine yasuo galio, annie akshan
 orianna, mid lane, morgana ahri kennen fizz, ekko twisted fate lucian ziggs
@@ -45,7 +45,7 @@ morgana, support mid lane jungle, karma malphite nami brand, ekko evelynn akali 
 akshan, mid lane, morgana ziggs caitlyn brand, akali annie xayah katarina
 galio, mid lane support, karma nami akshan veigar, akali annie kennen fizz
 aurelion sol, mid lane, lux ekko irelia brand, orianna akali annie kennen
-seraphine, support mid lane, karma leona alistair malphite, morgana blitzcrank annie sona
+seraphine, support mid lane, karma leona alistar malphite, morgana blitzcrank annie sona
 corki, mid lane, lux tristana irelia brand, twisted fate morgana akali lucian
 ezreal, mid lane dragon lane, jinx tristana draven ashe, kai`sa lucian xayah varus
 karma, support mid lane, nami soraka, braum morgana rakan janna
@@ -70,15 +70,26 @@ vi, jungle, amumu wukong rammus master yi, rengar ekko evelynn lee sin
 evelynn, jungle, amumu nunu & willump morgana rammus, dr mundo
 shyvana, jungle, nunu & willump tryndamere rammus master yi, rengar ekko evelynn vi
 rammus, jungle, morgana, rengar kha`zix evelynn master yi
-thresh, support, karma braum leona alistair, yuumi morgana blitzcrank seraphine
+thresh, support, karma braum leona alistar, yuumi morgana blitzcrank seraphine
 blitzcrank, support, braum pantheon malphite soraka, yuumi sona lulu rakan
-yuumi, support, braum leona alistair soraka, janna
+yuumi, support, braum leona alistar soraka, janna
 lulu, support, karma sona malphite soraka, morgana leona rakan
 nami, support, seraphine malphite soraka brand, yuumi morgana rakan janna
 leona, support, karma sona lulu soraka, yuumi blitzcrank seraphine janna
 soraka, support, seraphine brand, yuumi braum lulu rakan
-braum, support, lux karma malphite nami, yuumi rakan janna alistair
-rakan, support, karma sona alistair nami, yuumi morgana janna thresh
+braum, support, lux karma malphite nami, yuumi rakan janna alistar
+rakan, support, karma sona alistar nami, yuumi morgana janna thresh
 sona, support, lux braum blitzcrank seraphine, yuumi lulu rakan janna
-alistair, support, lux braum sona janna, yuumi seraphine lulu rakan
-janna, support, lux pantheon seraphine annie, lulu alistair
+alistar, support, lux braum sona janna, yuumi seraphine lulu rakan
+janna, support, lux pantheon seraphine annie, lulu alistar
+nautilus, support, seraphine sona lux rakan yuumi, morgana braum leona alistar janna
+pyke, support, lux sona brand senna seraphine, morgana soraka rakan
+samira, dragon lane, vayne ezreal ashe, caitlyn varus tristana
+kassadin, mid lane, katarina diana veigar ekko annie, lucian zed pantheon akshan jayce
+sion, baron lane, malphite teemo kayle nasus akali tryndamere, vayne irelia fiora darius olaf riven camille gwen
+gwen, baron lane, shen dr mundo sion gragas malphite, jayce fiora jax renekton yasuo akali riven
+yone, mid  baron lane, aurelion sol corki ziggs seraphine veigar, irelia ahri zed pantheon akali vex
+vex, mid lane, yone katarina yasuo ekko irelia, zed annie galio lux morgana
+warwick, jungle, master yi tryndamere irelia, jax olaf morgana
+aatrox, baron lane, nil, nil
+kayn, jungle, nil, nil

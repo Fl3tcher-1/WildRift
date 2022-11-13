@@ -53,7 +53,7 @@ func (website *Website) CreateChampion(champion Champion) {
 func (data *Website) GetChamp() []Champion {
 	// champions := []Champion{}
 
-	rows, err := data.DB.Query(`SELECT * FROM champion`)
+	rows, err := data.DB.Query(`SELECT * FROM champion ORDER BY name ASC`)
 	if err !=nil{
 		fmt.Println(err)
 	}
@@ -61,10 +61,7 @@ func (data *Website) GetChamp() []Champion {
 
 	champData := []Champion{}
 
-	// var name string
-	// var role string
-	// var strong string
-	// var weak string
+	
 
 	for rows.Next() {
 		i:= Champion{}

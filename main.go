@@ -14,208 +14,6 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-// func topLane(input string) {
-
-// 	akali := Champion{s
-// 		"Akali",
-// 		[]string{"Twisted Fate", "Irelia", "Yasuo"},
-// 		[]string{"Fiora", "Jax", "Nasus", "Galio", "Garen", "Diana", "Renekton"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	camille := Champion{
-// 		"Camille",
-// 		[]string{"Yasuo", "Jarvan", "Jax"},
-// 		[]string{"Fiora", "Jax", "Nasus", "Teemo", "Garen", "Renekton", "Gragas"},
-// 		//  "Roaming, ganking and isolating enemies",
-// 		//  "Mid Game",
-// 	}
-// 	darius := Champion{
-// 		"Darius",
-// 		[]string{"Nasus", "Garen", "Yasuo"},
-// 		[]string{"Kennen", "Vayne", "Jax", "Teemo", "Zed", "Renekton"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	diana := Champion{
-// 		"Diana",
-// 		[]string{"Zed", "Fizz", "Katarina"},
-// 		[]string{"Renekton", "Ziggs", "Irelia", "Galio"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	mundo := Champion{
-// 		"Dr Mundo",
-// 		[]string{"Lee Sin", "Singed", "Jax"},
-// 		[]string{"Darius", "Shyvana", "Olaf", "Fiora", "Vayne", "Mundo"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	fiora := Champion{
-// 		"Fiora",
-// 		[]string{"Garen", "Akali", "Jax"},
-// 		[]string{"Garen", "Malphite", "Pantheon", "Darius", "Singed", "Teemo", "Renekton", "Kayle"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-
-// 	garen := Champion{
-// 		"Garen",
-// 		[]string{"Nasus", "Jax", "Yasuo"},
-// 		[]string{"Fiora", "Teemo", "Darius", "Pantheon", "Kayle"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	gragas := Champion{
-// 		"Gragas",
-// 		[]string{"Camille", "Evelynn", "Xin Zhao"},
-// 		[]string{"Fiora", "Yasuo", "Ahri", "Fizz", "Evelynn", "Akali", "Diana", "Ziggs", "Lee Sin", "Jax"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	graves := Champion{
-// 		"Graves",
-// 		[]string{"Olaf", "Fiora", "Rengar", "Jarvan"},
-// 		[]string{"Evelynn", "Lee Sin", "Rammus"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	irelia := Champion{
-// 		"Irelia",
-// 		[]string{"Mundo", "Malphite", "Diana", "Jayce"},
-// 		[]string{"Fizz", "Zed", "Galio", "Akali", "Yasuo", "Teemo", "Ziggs", "Seraphine", "Jaxx", "Akali"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	jarvan := Champion{
-// 		"Jarvan IV",
-// 		[]string{"Olaf", "Evelynn", "Wukong"},
-// 		[]string{"Graves", "Vi", "Lee Sin", "Xin Zhao", "Khazix", "Rammus"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	jax := Champion{
-// 		"Jax",
-// 		[]string{"Tryndamere", "Xin Zhao", "Yasuo"},
-// 		[]string{"Fiora", "Darius", "Garen", "Mundo", "Malphite", "Pantheon", "Renekton", "Singed"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	jayce := Champion{
-// 		"Jayce",
-// 		[]string{"Fiora", "Kennen", "Darius"},
-// 		[]string{"Irelia", "Nasus", "Wukong", "Galio", "Garen", "Diana", "Renekton", "Sett"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	kayle := Champion{
-// 		"Kayle",
-// 		[]string{"Garen", "Fiora", "Mundo"},
-// 		[]string{"Tryndamere", "Irelia", "Riven", "Renekton", "Sett"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	kennen := Champion{
-// 		"Kennen",
-// 		[]string{"Jax", "Camille", "Teemo"},
-// 		[]string{"Fiora", "Tryndamere", "Jarvan", "Rengar", "Nasus", "Mundo", "Garen"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	malphite := Champion{
-// 		"Malphite",
-// 		[]string{"Tryndamere", "Fiora", "Jax"},
-// 		[]string{"Nasus", "Akali", "Olaf", "Singed", "Garen", "Darius"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	nasus := Champion{
-// 		"Nasus",
-// 		[]string{"Fiora", "Malphite", "Akali"},
-// 		[]string{"Darius", "Singed", "Wukong", "Garen", "Fiora", "Vayne", "Kennen", "Olaf"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	olaf := Champion{
-// 		"Olaf",
-// 		[]string{"Nasus", "Shyvana", "Malphite"},
-// 		[]string{"Evelynn", "Yi", "Khazix", "Gragas", "Lee Sin", "Jax", "Fiora", "Jarvan"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	pantheon := Champion{
-// 		"Pantheon",
-// 		[]string{"Yasuo", "Camille", "Fiora"},
-// 		[]string{"Wukong", "Teemo", "Malphite", "Singed", "Rengar", "Akali", "Renekton"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	riven := Champion{
-// 		"Riven",
-// 		[]string{"Kayle", "Irelia", "Yasuo", "Pantheon", "Wukong", "Jax"},
-// 		[]string{"Renekton", "Teemo", "Fiora", "Nasus", "Garen", "Gragas", "Wukong"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	renekton := Champion{
-// 		"Renekton",
-// 		[]string{"Riven", "Camille", "Yasuo"},
-// 		[]string{"Garen", "Teemo", "Vayne", "Kennen", "Gragas", "Rengar", "Malphite"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-
-// 	sett := Champion{
-
-// 		"Sett",
-// 		[]string{"Tanks", "Irelia", "Yasuo", "Kayle"},
-// 		[]string{"Jayce", "Darius", "Kennen", "Riven 50/50"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	singed := Champion{
-// 		"Singed",
-// 		[]string{"Nasus", "Malphite", "Jax"},
-// 		[]string{"Rengar", "Darius", "Vayne", "Camille", "Kennen", "Garen", "Teemo", "Mundo"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	teemo := Champion{
-// 		"Teemo",
-// 		[]string{"Yi", "Garen", "Tryndamere"},
-// 		[]string{"Pantheon", "Vayne", "Wukong", "Malphite", "Mundo", "Kennen", "Yasuo", "Akali"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	tryndamere := Champion{
-// 		"Tryndamere",
-// 		[]string{"Darius", "Garen", "Nasus"},
-// 		[]string{"Singed", "Malphite", "Wukong", "Jax", "Renekton", "Fiora"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	vayne := Champion{
-// 		"Vayne",
-// 		[]string{"Tanks", "Ezreal", "Nasus", "Jhin"},
-// 		[]string{"Draven", "Varus", "Caitlyn", "Miss Fortune", "Lee Sin", "Jinx"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	wukong := Champion{
-// 		"Wukong",
-// 		[]string{"Jax", "Xin Zhao", "Yi", "Fiora"},
-// 		[]string{"Garen", "Darius", "Lee Sin", "Singed", "Mundo", "Shyvana", "Lee Sin"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-// 	yasuo := Champion{
-// 		"Yasuo",
-// 		[]string{"Ahri", "Twisted Fate", "Orianna"},
-// 		[]string{"Renekton", "Fizz", "Darius", "Annie", "Garen", "Malphite", "Pantheon"},
-// 		//  "Roaming & executing enemies",
-// 		//  "Mid Game",
-// 	}
-
 func CheckErr(e error) {
 	fmt.Println(e)
 }
@@ -305,7 +103,7 @@ func homeHandler(w http.ResponseWriter, r *http.Request) {
 	database.Connect(db)
 
 	tpl := template.Must(template.ParseGlob("templates/*"))
-	tpl.ExecuteTemplate(w, "home.html", data.GetChamp())
+	tpl.ExecuteTemplate(w, "index.html", data.GetChamp())
 }
 func championHandler(w http.ResponseWriter, r *http.Request, name string) {
 	db, err := sql.Open("sqlite3", "./database/champion.db")
@@ -317,10 +115,9 @@ func championHandler(w http.ResponseWriter, r *http.Request, name string) {
 	data := database.Connect(db)
 	database.Connect(db)
 
+	for _, champion := range data.GetChamp() {
+		if champion.Name == path {
 
-	for _, champion := range data.GetChamp(){
-		if champion.Name == path{
-			
 			tpl := template.Must(template.ParseGlob("templates/*"))
 			tpl.ExecuteTemplate(w, "champion.html", champion)
 		}
@@ -337,19 +134,20 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Path
 	pathLink += ".jpg"
 
-
 	// champPath:= r.URL.Path
 	// fmt.Println(champPath)
 
 	switch r.URL.Path {
 	case "/style":
 		http.ServeFile(w, r, "./templates/style.css")
+	case "/images/favicon-32x32.png":
+		http.ServeFile(w, r, "./images/favicon-32x32.png")
 	case "/home":
 		homeHandler(w, r)
 	case name:
-		if strings.Contains(name, "/home/"){
-			championHandler(w,r, name)
-		} else{
+		if strings.Contains(name, "/home/") {
+			championHandler(w, r, name)
+		} else {
 			http.ServeFile(w, r, pathLink)
 		}
 	}
